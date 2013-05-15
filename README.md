@@ -16,6 +16,8 @@ http://www.alfredapp.com/
 
 Changelog:
 
+v1.11 - Even more improved notification reliability, hopefully.
+
 v1.1 - Added 'sync all devices' option. Improved completion notification reliability.
 
 v1.0 - Initial Release

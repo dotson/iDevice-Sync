@@ -1,5 +1,6 @@
 {
-    "version": 1.1,
+    "version": 1.11,
     "download_url": "https://github.com/dotson/iDevice-Sync/raw/master/iDevice%20Sync.alfredworkflow",
-    "description": "Added 'sync all devices' option. Improved completion notification reliability."
+    "description": "Even more improved notification reliability, hopefully.
+"
 }
