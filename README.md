@@ -1,5 +1,6 @@
 iDevice Sync v1.1
-An Alfred 2 workflow for syncing each of your iDevices individually.
+=============
+*An Alfred 2 workflow for syncing each of your iDevices individually.*
 
 A simple workflow that allows you to sync your iDevices by name. The workflow is triggered by the keyword "sync".
 
