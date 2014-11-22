@@ -1,4 +1,4 @@
-iDevice Sync v1.1
+iDevice Sync v1.2
 =============
 *An Alfred 2 workflow for syncing each of your iDevices individually.*
 
@@ -12,13 +12,8 @@ Using the *'alt'* modifier key when selecting a device from the list will force 
 
 The method used for triggering the completion notification is a little hack-y and may be unreliable in some sync attempts. This will be improved as becomes possible based on the scripting ability of iTunes improving (unlikely).
 
-**Related Links:**
-http://www.alfredapp.com/
-
 **Changelog:**
-
-v1.11 - Even more improved notification reliability, hopefully.
-
-v1.1 - Added 'sync all devices' option. Improved completion notification reliability.
-
-v1.0 - Initial Release
+- **v1.2** New Icon (modified from here:http://www.alessioatzeni.com/metrize-icons/); Fixed the broken start/complete messaging.
+- **v1.11** Even more improved notification reliability, hopefully.
+- **v1.1** Added 'sync all devices' option. Improved completion notification reliability.
+- **v1.0** Initial Release
