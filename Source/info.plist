@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.dotson.iDeviceSync</string>
+	<key>connections</key>
+	<dict>
+		<key>462014C8-358F-4953-B9B9-2D560BF9598B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8B46341E-2253-434C-BD48-A6577ECE29CC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A3F9B348-4AA7-4577-995A-AD12BCF813F9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6421ADAF-C031-4174-B14F-863AB55ECB12</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F57589CF-FF9F-4C61-9104-747F344F094C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A88DCB51-6824-4E3E-B597-1A6E3D046BCB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6421ADAF-C031-4174-B14F-863AB55ECB12</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AA284081-716A-488B-973C-56F9ED5CE156</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E6F6549E-C002-4959-8164-F79904FA0A94</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>14E4287E-47D3-4C0A-A33E-6A16327691AB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BADBE521-F341-4187-8307-7D14EADD3C5A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AA284081-716A-488B-973C-56F9ED5CE156</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E6F6549E-C002-4959-8164-F79904FA0A94</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>462014C8-358F-4953-B9B9-2D560BF9598B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>C. Dotson</string>
+	<key>description</key>
+	<string>A workflow for syncing your iDevices.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>iDevice Sync</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>1</integer>
+				<key>hotmod</key>
+				<integer>1310720</integer>
+				<key>hotstring</key>
+				<string>S</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>BADBE521-F341-4187-8307-7D14EADD3C5A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>keyword</key>
+				<string>sync</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Searching for all devices…</string>
+				<key>script</key>
+				<string>set workflowFolder to do shell script "pwd"set wlib to load script POSIX file (workflowFolder &amp; "/q_workflow.scpt")set wf to wlib's new_workflow()add_result of wf with isValid given theUid:"", theArg:"syncAll", theTitle:"Available iTunes Devices:", theAutocomplete:"", theSubtitle:"Select here to sync all listed devices.", theIcon:"icon.png", theType:""set mynames to {}on simple_sort(my_list)	set the index_list to {}	set the sorted_list to {}	repeat (the number of items in my_list) times		set the low_item to ""		repeat with i from 1 to (number of items in my_list)			if i is not in the index_list then				set this_item to item i of my_list as text				if the low_item is "" then					set the low_item to this_item					set the low_item_index to i				else if this_item comes before the low_item then					set the low_item to this_item					set the low_item_index to i				end if			end if		end repeat		set the end of sorted_list to the low_item		set the end of the index_list to the low_item_index	end repeat	return the sorted_listend simple_sorttell application "iTunes"	repeat with s in sources		if (kind of s is iPod) then			set end of mynames to (name of s) as text		end if	end repeat		set mynames to my simple_sort(mynames)	repeat with s in mynames		set myname to s		add_result of wf with isValid given theUid:"", theArg:myname, theTitle:"Sync: " &amp; myname, theAutocomplete:"", theSubtitle:"", theIcon:"icon.png", theType:""	end repeat	end tellwf's to_xml("")</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Choose device to sync from list</string>
+				<key>title</key>
+				<string>Sync iTunes Devices</string>
+				<key>type</key>
+				<integer>6</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E6F6549E-C002-4959-8164-F79904FA0A94</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Syncing Device:</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>8B46341E-2253-434C-BD48-A6577ECE29CC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>set mydevice to "{query}"set mydevices to {}set myname to ""if mydevice is "syncAll" then	tell application "iTunes"		repeat with s in sources			if (kind of s is iPod) then				update s				set myname to (name of s)				set end of mydevices to myname			end if		end repeat	end tell	set atid to AppleScript's text item delimiters	set AppleScript's text item delimiters to ", "	set mydevices to mydevices as text	set AppleScript's text item delimiters to atidelse	tell application "iTunes"		repeat with s in sources			if (kind of s is iPod) then				if (name of s) is mydevice then					update s					set mydevices to (name of s)				end if							end if		end repeat	end tellend ifreturn mydevices</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>462014C8-358F-4953-B9B9-2D560BF9598B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>AA284081-716A-488B-973C-56F9ED5CE156</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>sync</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
+readonly remote_info_plist='https://raw.githubusercontent.com/dotson/DJ-Pedro/master/Source/info.plist'
+readonly workflow_url='https://github.com/dotson/DJ-Pedro/raw/master/DJ%20Pedro.alfredworkflow'
+readonly download_type='github_release'
+readonly frequency_check='4'
+
+# FROM HERE ON, CODE SHOULD BE LEFT UNTOUCHED!
+function abort {
+  echo "${1}" &gt;&amp;2
+  exit 1
+}
+
+function url_exists {
+  curl --silent --location --output /dev/null --fail --range 0-0 "${1}"
+}
+
+function notification {
+  readonly local notificator="$(find . -type d -name 'Notificator.app')"
+  if [[ -n "${notificator}" ]]; then
+    "${notificator}/Contents/Resources/Scripts/notificator" --message "${1}" --title "${alfred_workflow_name}" --subtitle 'A new version is available'
+    return
+  fi
+
+  readonly local terminal_notifier="$(find . -type f -name 'terminal-notifier')"
+  if [[ -n "${terminal_notifier}" ]]; then
+    "${terminal_notifier}" -title "${alfred_workflow_name}" -subtitle 'A new version is available' -message "${1}"
+    return
+  fi
+
+  osascript -e "display notification \"${1}\" with title \"${alfred_workflow_name}\" subtitle \"A new version is available\""
+}
+
+# Local sanity checks
+readonly local_info_plist='info.plist'
+readonly local_version="$(/usr/libexec/PlistBuddy -c 'print version' "${local_info_plist}")"
+
+[[ -n "${local_version}" ]] || abort 'You need to set a workflow version in the configuration sheet.'
+[[ "${download_type}" =~ ^(direct|page|github_release)$ ]] || abort "'download_type' (${download_type}) needs to be one of 'direct', 'page', or 'github_release'."
+[[ "${frequency_check}" =~ ^[0-9]+$ ]] || abort "'frequency_check' (${frequency_check}) needs to be a number."
+
+# Check for updates
+if [[ $(find "${local_info_plist}" -mtime +"${frequency_check}"d) ]]; then
+  if ! url_exists "${remote_info_plist}"; then abort "'remote_info_plist' (${remote_info_plist}) appears to not be reachable."; fi # Remote sanity check
+
+  readonly tmp_file="$(mktemp)"
+  curl --silent --location --output "${tmp_file}" "${remote_info_plist}"
+  readonly remote_version="$(/usr/libexec/PlistBuddy -c 'print version' "${tmp_file}")"
+
+  if [[ "${local_version}" == "${remote_version}" ]]; then
+    touch "${local_info_plist}" # Reset timer by touching local file
+    exit 0
+  fi
+
+  if [[ "${download_type}" == 'page' ]]; then
+    notification 'Opening download page…'
+    open "${workflow_url}"
+    exit 0
+  fi
+
+  download_url="$([[ "${download_type}" == 'github_release' ]] &amp;&amp; curl --silent "https://api.github.com/repos/${workflow_url}/releases/latest" | grep 'browser_download_url' | head -1 | sed -E 's/.*browser_download_url": "(.*)"/\1/' || echo "${workflow_url}")"
+
+  if url_exists "${download_url}"; then
+    notification 'Downloading and installing…'
+    curl --silent --location --output "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow" "${download_url}"
+    open "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow"
+  else
+    abort "'workflow_url' (${download_url}) appears to not be reachable."
+  fi
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>14E4287E-47D3-4C0A-A33E-6A16327691AB</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>completion-watcher</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<false/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>A3F9B348-4AA7-4577-995A-AD12BCF813F9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>completion-watcher</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>A88DCB51-6824-4E3E-B597-1A6E3D046BCB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Sync Complete:</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>F57589CF-FF9F-4C61-9104-747F344F094C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>script</key>
+				<string>set mydevices to "{query}"try	tell application "System Events" to tell process "iTunes"				# Check if sync has started		tell window "iTunes"			tell scroll area 1				set thisCount to count of (every button whose description contains "show next view")				repeat while thisCount is 0					set thisCount to count of (every button whose description contains "show next view")					delay 1				end repeat							end tell		end tell				# Check if sync has completed		tell window "iTunes"			tell scroll area 1				set thisCount to count of (every button whose description contains "show next view")								repeat while thisCount is not 0					set thisCount to count of (every button whose description contains "show next view")					delay 1				end repeat							end tell		end tell	end tell		return mydevices	end try</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>6421ADAF-C031-4174-B14F-863AB55ECB12</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>iDevice Sync
+=====================
+
+An Alfred workflow for syncing each of your iDevices individually.
+
+A simple workflow that allows you to sync your iDevices by name. The workflow is triggered by the keyword "sync".
+
+Upon actioning, the workflow searches for all connected iDevices and lists them by name in an Alfred window. Actioning any of the iDevices in the list will tell iTunes to begin syncing the chosen iDevice. A notification is returned via the default notification system when the sync is complete.
+
+Known Issues:
+
+The method used for triggering the completion notification is a little hack-y and may be unreliable in some sync attempts. This will be improved as becomes possible based on the scripting ability of iTunes improving (unlikely).</string>
+	<key>uidata</key>
+	<dict>
+		<key>14E4287E-47D3-4C0A-A33E-6A16327691AB</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>12</integer>
+			<key>note</key>
+			<string>OneUpdater</string>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>125</integer>
+		</dict>
+		<key>462014C8-358F-4953-B9B9-2D560BF9598B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>6421ADAF-C031-4174-B14F-863AB55ECB12</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+		<key>8B46341E-2253-434C-BD48-A6577ECE29CC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>A3F9B348-4AA7-4577-995A-AD12BCF813F9</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
+		<key>A88DCB51-6824-4E3E-B597-1A6E3D046BCB</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+		<key>AA284081-716A-488B-973C-56F9ED5CE156</key>
+		<dict>
+			<key>xpos</key>
+			<integer>215</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
+		<key>BADBE521-F341-4187-8307-7D14EADD3C5A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>65</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>E6F6549E-C002-4959-8164-F79904FA0A94</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>F57589CF-FF9F-4C61-9104-747F344F094C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.4.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/dotson/iDevice-Sync</string>
+</dict>
+</plist>
