@@ -276,8 +276,8 @@
 				<string></string>
 				<key>script</key>
 				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
-readonly remote_info_plist='https://raw.githubusercontent.com/dotson/DJ-Pedro/master/Source/info.plist'
-readonly workflow_url='https://github.com/dotson/DJ-Pedro/raw/master/DJ%20Pedro.alfredworkflow'
+readonly remote_info_plist='https://raw.githubusercontent.com/dotson/iDevice-Sync/master/Source/info.plist'
+readonly workflow_url='https://github.com/dotson/iDevice-Sync/raw/master/iDevice%20Sync.alfredworkflow'
 readonly download_type='github_release'
 readonly frequency_check='4'
 
@@ -538,7 +538,7 @@ The method used for triggering the completion notification is a little hack-y an
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.4.0</string>
+	<string>1.4.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/dotson/iDevice-Sync</string>
 </dict>
