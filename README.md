@@ -4,8 +4,8 @@ iDevice Sync
 
 A simple workflow that allows you to sync your iDevices by name. The workflow is triggered by the keyword **"sync"**.
 
-Upon actioning, the workflow searches for all connected iDevices and lists them by name in an Alfred window. Actioning any of the iDevices in the list will tell iTunes to begin syncing the chosen iDevice. A notification is returned via the default notification system when the sync is complete.
+Upon actioning, the workflow displays all iDevices that you have listed by name in the variable list for the workflow. Actioning any of the iDevices in the list will tell Finder to look for them in a new window and start the sync. If a named device is not listed, Alfred will try a few times to find it and then throw an eeor if not found.
 
 **Known Issues:**
 
-The method used for triggering the completion notification is a little hack-y and may be unreliable in some sync attempts. This will be improved as becomes possible based on the scripting ability of iTunes improving (unlikely).
+This is based purely on GUI scripting which is easy to break if Apple changes even the smallest thing. Since Catalina, there's no other known way to do this via applescript.

@@ -6,47 +6,11 @@
 	<string>com.dotson.iDeviceSync</string>
 	<key>connections</key>
 	<dict>
-		<key>462014C8-358F-4953-B9B9-2D560BF9598B</key>
+		<key>44F6B064-5DE7-4509-A7FF-01E187D994B1</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>8B46341E-2253-434C-BD48-A6577ECE29CC</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>A3F9B348-4AA7-4577-995A-AD12BCF813F9</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>6421ADAF-C031-4174-B14F-863AB55ECB12</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>F57589CF-FF9F-4C61-9104-747F344F094C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>A88DCB51-6824-4E3E-B597-1A6E3D046BCB</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>6421ADAF-C031-4174-B14F-863AB55ECB12</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -60,16 +24,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>E6F6549E-C002-4959-8164-F79904FA0A94</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>14E4287E-47D3-4C0A-A33E-6A16327691AB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -95,7 +49,17 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>462014C8-358F-4953-B9B9-2D560BF9598B</string>
+				<string>44F6B064-5DE7-4509-A7FF-01E187D994B1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>8DF8D4C7-6E09-4C8A-B040-011DE86199B4</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -115,6 +79,83 @@
 	<string>iDevice Sync</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>keyword</key>
+				<string>sync</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Searching for all devices…</string>
+				<key>script</key>
+				<string>set workflowFolder to do shell script "pwd"set wlib to load script POSIX file (workflowFolder &amp; "/q_workflow.scpt")set wf to wlib's new_workflow()--add_result of wf with isValid given theUid:"", theArg:"syncAll", theTitle:"Available Devices:", theAutocomplete:"", theSubtitle:"", theIcon:"icon.png", theType:""set mynames to {system attribute "device00",system attribute "device01",system attribute "device02",system attribute "device03",system attribute "device04",system attribute "device05",system attribute "device06",system attribute "device07",system attribute "device08",system attribute "device09"}-- SORT DEVICE LIST
+-- THIS CAN BE COMMENTED OUT TO USE ALFRED ORDERINGon simple_sort(my_list)	set the index_list to {}	set the sorted_list to {}	repeat (the number of items in my_list) times		set the low_item to ""		repeat with i from 1 to (number of items in my_list)			if i is not in the index_list then				set this_item to item i of my_list as text				if the low_item is "" then					set the low_item to this_item					set the low_item_index to i				else if this_item comes before the low_item then					set the low_item to this_item					set the low_item_index to i				end if			end if		end repeat		set the end of sorted_list to the low_item		set the end of the index_list to the low_item_index	end repeat	return the sorted_listend simple_sortset mynames to my simple_sort(mynames)-- CREATE LIST USING NON-BLANK DEVICE NAMES FROM VARIABLE LISTrepeat with s in mynames	set myname to s	if contents of myname is not ""	add_result of wf with isValid given theUid:"", theArg:myname, theTitle:"Sync: " &amp; myname, theAutocomplete:"", theSubtitle:"", theIcon:"icon.png", theType:""
+
+	end if
+
+end repeatwf's to_xml("")</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Choose device to sync from list</string>
+				<key>title</key>
+				<string>Sync iTunes Devices</string>
+				<key>type</key>
+				<integer>6</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E6F6549E-C002-4959-8164-F79904FA0A94</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>set chosenDevice to "{query}"-- Open Finder windowtell application "Finder"	activate	open ("/" as POSIX file)end tell-- CHECK IF DEVICE IS IN FINDER WINDOWon isPhoneVisible(chosenDevice)	tell application "System Events" to tell outline 1 of scroll area 1 of splitter group 1 of window 1 of application process "Finder"		set theElements to first UI element of every row whose name is chosenDevice		repeat with e in theElements			try				if name of e is chosenDevice then					return true				end if			end try		end repeat	end tell	return falseend isPhoneVisible-- IF NOT IN FINDER WINDOW THEN RESTART DAEMONif not isPhoneVisible(chosenDevice) then	-- Restart daemon that shows the iPhone in the sidebar so it is actually visible	do shell script "pkill -9 AMPDevicesAgent AMPDeviceDiscoveryAgent"end if-- Select iPhone-- needs retry until the iPhone becomes visibletell application "System Events" to tell outline 1 of scroll area 1 of splitter group 1 of window 1 of application process "Finder"	set hasFoundPhone to false		set attempts to 0	repeat while not hasFoundPhone		set attempts to attempts + 1		if attempts = 10 then return "Sorry, device not found in Finder window"		set theElements to first UI element of every row whose name is chosenDevice		repeat with e in theElements			try				if name of e is chosenDevice then					tell e to perform action "AXOpen"					set hasFoundPhone to true					exit repeat				end if			end try		end repeat		delay 1	end repeat	end tell-- Start synctell application "System Events" to tell application process "Finder"	repeat until button "Sync" of splitter group 1 of splitter group 1 of window chosenDevice exists		delay 1	end repeat		click button "Sync" of splitter group 1 of splitter group 1 of window chosenDeviceend tellreturn chosenDevice</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>44F6B064-5DE7-4509-A7FF-01E187D994B1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -149,55 +190,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>4</integer>
-				<key>keyword</key>
-				<string>sync</string>
-				<key>queuedelaycustom</key>
-				<integer>1</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<false/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Searching for all devices…</string>
-				<key>script</key>
-				<string>set workflowFolder to do shell script "pwd"set wlib to load script POSIX file (workflowFolder &amp; "/q_workflow.scpt")set wf to wlib's new_workflow()add_result of wf with isValid given theUid:"", theArg:"syncAll", theTitle:"Available iTunes Devices:", theAutocomplete:"", theSubtitle:"Select here to sync all listed devices.", theIcon:"icon.png", theType:""set mynames to {}on simple_sort(my_list)	set the index_list to {}	set the sorted_list to {}	repeat (the number of items in my_list) times		set the low_item to ""		repeat with i from 1 to (number of items in my_list)			if i is not in the index_list then				set this_item to item i of my_list as text				if the low_item is "" then					set the low_item to this_item					set the low_item_index to i				else if this_item comes before the low_item then					set the low_item to this_item					set the low_item_index to i				end if			end if		end repeat		set the end of sorted_list to the low_item		set the end of the index_list to the low_item_index	end repeat	return the sorted_listend simple_sorttell application "iTunes"	repeat with s in sources		if (kind of s is iPod) then			set end of mynames to (name of s) as text		end if	end repeat		set mynames to my simple_sort(mynames)	repeat with s in mynames		set myname to s		add_result of wf with isValid given theUid:"", theArg:myname, theTitle:"Sync: " &amp; myname, theAutocomplete:"", theSubtitle:"", theIcon:"icon.png", theType:""	end repeat	end tellwf's to_xml("")</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Choose device to sync from list</string>
-				<key>title</key>
-				<string>Sync iTunes Devices</string>
-				<key>type</key>
-				<integer>6</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>E6F6549E-C002-4959-8164-F79904FA0A94</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -217,29 +209,6 @@
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>set mydevice to "{query}"set mydevices to {}set myname to ""if mydevice is "syncAll" then	tell application "iTunes"		repeat with s in sources			if (kind of s is iPod) then				update s				set myname to (name of s)				set end of mydevices to myname			end if		end repeat	end tell	set atid to AppleScript's text item delimiters	set AppleScript's text item delimiters to ", "	set mydevices to mydevices as text	set AppleScript's text item delimiters to atidelse	tell application "iTunes"		repeat with s in sources			if (kind of s is iPod) then				if (name of s) is mydevice then					update s					set mydevices to (name of s)				end if							end if		end repeat	end tellend ifreturn mydevices</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>462014C8-358F-4953-B9B9-2D560BF9598B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.junction</string>
 			<key>uid</key>
@@ -250,30 +219,10 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
+				<key>concurrently</key>
 				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
 				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>sync</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
 				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
 				<key>script</key>
 				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
 readonly remote_info_plist='https://raw.githubusercontent.com/dotson/iDevice-Sync/master/Source/info.plist'
@@ -348,95 +297,13 @@ fi</string>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
 				<key>type</key>
 				<integer>0</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>14E4287E-47D3-4C0A-A33E-6A16327691AB</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>completion-watcher</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<false/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>A3F9B348-4AA7-4577-995A-AD12BCF813F9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>triggerid</key>
-				<string>completion-watcher</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>A88DCB51-6824-4E3E-B597-1A6E3D046BCB</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Sync Complete:</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>F57589CF-FF9F-4C61-9104-747F344F094C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>36</integer>
-				<key>script</key>
-				<string>set mydevices to "{query}"try	tell application "System Events" to tell process "iTunes"				# Check if sync has started		tell window "iTunes"			tell scroll area 1				set thisCount to count of (every button whose description contains "show next view")				repeat while thisCount is 0					set thisCount to count of (every button whose description contains "show next view")					delay 1				end repeat							end tell		end tell				# Check if sync has completed		tell window "iTunes"			tell scroll area 1				set thisCount to count of (every button whose description contains "show next view")								repeat while thisCount is not 0					set thisCount to count of (every button whose description contains "show next view")					delay 1				end repeat							end tell		end tell	end tell		return mydevices	end try</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>6421ADAF-C031-4174-B14F-863AB55ECB12</string>
+			<string>8DF8D4C7-6E09-4C8A-B040-011DE86199B4</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -449,37 +316,19 @@ An Alfred workflow for syncing each of your iDevices individually.
 
 A simple workflow that allows you to sync your iDevices by name. The workflow is triggered by the keyword "sync".
 
-Upon actioning, the workflow searches for all connected iDevices and lists them by name in an Alfred window. Actioning any of the iDevices in the list will tell iTunes to begin syncing the chosen iDevice. A notification is returned via the default notification system when the sync is complete.
+Upon actioning, the workflow displays all iDevices that you have listed by name in the variable list for the workflow. Actioning any of the iDevices in the list will tell Finder to look for them in a new window and start the sync. If a named device is not listed, Alfred will try a few times to find it and then throw an eeor if not found.
 
 Known Issues:
 
-The method used for triggering the completion notification is a little hack-y and may be unreliable in some sync attempts. This will be improved as becomes possible based on the scripting ability of iTunes improving (unlikely).</string>
+This is based purely on GUI scripting which is easy to break if Apple changes even the smallest thing. Since Catalina, there's no other known way to do this via applescript.</string>
 	<key>uidata</key>
 	<dict>
-		<key>14E4287E-47D3-4C0A-A33E-6A16327691AB</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>12</integer>
-			<key>note</key>
-			<string>OneUpdater</string>
-			<key>xpos</key>
-			<integer>300</integer>
-			<key>ypos</key>
-			<integer>125</integer>
-		</dict>
-		<key>462014C8-358F-4953-B9B9-2D560BF9598B</key>
+		<key>44F6B064-5DE7-4509-A7FF-01E187D994B1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>505</integer>
 			<key>ypos</key>
-			<real>10</real>
-		</dict>
-		<key>6421ADAF-C031-4174-B14F-863AB55ECB12</key>
-		<dict>
-			<key>xpos</key>
-			<integer>500</integer>
-			<key>ypos</key>
-			<integer>260</integer>
+			<integer>10</integer>
 		</dict>
 		<key>8B46341E-2253-434C-BD48-A6577ECE29CC</key>
 		<dict>
@@ -488,23 +337,16 @@ The method used for triggering the completion notification is a little hack-y an
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
-		<key>A3F9B348-4AA7-4577-995A-AD12BCF813F9</key>
+		<key>8DF8D4C7-6E09-4C8A-B040-011DE86199B4</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>8</integer>
+			<integer>12</integer>
+			<key>note</key>
+			<string>OneUpdater</string>
 			<key>xpos</key>
-			<integer>700</integer>
+			<integer>510</integer>
 			<key>ypos</key>
-			<integer>130</integer>
-		</dict>
-		<key>A88DCB51-6824-4E3E-B597-1A6E3D046BCB</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>8</integer>
-			<key>xpos</key>
-			<integer>300</integer>
-			<key>ypos</key>
-			<integer>260</integer>
+			<integer>145</integer>
 		</dict>
 		<key>AA284081-716A-488B-973C-56F9ED5CE156</key>
 		<dict>
@@ -527,18 +369,34 @@ The method used for triggering the completion notification is a little hack-y an
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
-		<key>F57589CF-FF9F-4C61-9104-747F344F094C</key>
-		<dict>
-			<key>xpos</key>
-			<integer>700</integer>
-			<key>ypos</key>
-			<integer>260</integer>
-		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>device00</key>
+		<string>My iPhone Name</string>
+		<key>device01</key>
+		<string>My iPad Name</string>
+		<key>device02</key>
+		<string></string>
+		<key>device03</key>
+		<string></string>
+		<key>device04</key>
+		<string></string>
+		<key>device05</key>
+		<string></string>
+		<key>device06</key>
+		<string></string>
+		<key>device07</key>
+		<string></string>
+		<key>device08</key>
+		<string></string>
+		<key>device09</key>
+		<string></string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.4.1</string>
+	<string>2.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/dotson/iDevice-Sync</string>
 </dict>
