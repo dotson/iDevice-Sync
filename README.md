@@ -9,3 +9,6 @@ Upon actioning, the workflow displays all iDevices that you have listed by name 
 **Known Issues:**
 
 This is based purely on GUI scripting which is easy to break if Apple changes even the smallest thing. Since Catalina, there's no other known way to do this via applescript.
+
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=N67Q99HLLYR9N)
